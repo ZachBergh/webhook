@@ -7,7 +7,7 @@ function launch(route, handle){
 	function onRequest(req, res){
 
 		var pname = url.parse(req.url).pathname,
-			postData = "";
+			postData;
 		res.writeHead(200, {"Content-Type":"text/plain"});
 
 		req.addListener('data', function(data) {
