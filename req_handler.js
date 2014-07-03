@@ -1,4 +1,4 @@
-var qs = require('qs');,
+var qs = require('qs'),
 	child_process = require("child_process"),
 	cfg = require('./config').config;
 
