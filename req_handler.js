@@ -1,5 +1,4 @@
-var qs = require('qs'),
-	child_process = require("child_process"),
+var child_process = require("child_process"),
 	cfg = require('./config').config;
 
 var handleFn = function(){
