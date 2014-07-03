@@ -1,4 +1,4 @@
-var querystring = require("querystring"),
+var qs = require('qs');,
 	child_process = require("child_process"),
 	cfg = require('./config').config;
 
@@ -21,7 +21,7 @@ handleFn.elkhorizon = function(data){
 
 	if(typeof data != 'string') return 'false';
 	
-	var dataobj = querystring.parse(data);
+	var dataobj = qs.parse(data);
 	var branch = dataobj['repository[master_branch]'];
 	var repo_name = dataobj['repository[name]'];
 

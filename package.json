@@ -4,6 +4,7 @@
   "description": "by ZachBerg",
   "main": "index.js",
   "dependencies": {
+    "qs": "~0.6.6",
     "querystring": "~0.2.0",
     "supervisor": "~0.6.0"
   },
@@ -16,7 +17,7 @@
     "type": "git",
     "url": "git://github.com/ZachBergh/webhook.git"
   },
-  "author": "ZachBergh",
+  "author": "",
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/ZachBergh/webhook/issues"
