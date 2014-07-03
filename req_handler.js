@@ -22,8 +22,8 @@ handleFn.elkhorizon = function(data){
 	if(typeof data != 'string') return 'false';
 	
 	var dataobj = JSON.parse(data);
-	var branch = dataobj.payload.repository.master_branch;
-	var repo_name = dataobj.payload.repository.name;
+	var branch = dataobj.repository.master_branch;
+	var repo_name = dataobj.repository.name;
 
 	if(repo_name == "elkhorizon"){
 
