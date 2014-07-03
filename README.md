@@ -1,28 +1,31 @@
-### WEB HOOK
-=======================================
+webhook
+===========
 
-##Install
----------------------------------------
-
-    npm install
+Github Webhook web reciver
 
 
-##Config
----------------------------------------
-
-    config.js:path and branch
+Install
+===========
 
 
-##Launch
----------------------------------------
 
-    node index
+Configurate your repository
+-----------
+
+clone repo
+
++ npm install
++ config your config.js
++ config github webhook
+
+Launch
+-----------
+
++ node index
 
 
-##Notice
----------------------------------------
+FAQ
+===========
 
-    prot:1377
+Every repo can autopull by this repo just need config your config.js
 
-
-github : config webhook url
