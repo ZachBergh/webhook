@@ -4,25 +4,25 @@
 ##Install
 ---------------------------------------
 
-npm install
-```
+    npm install
+
 
 ##Config
 ---------------------------------------
 
-config.js:path and branch
-```
+    config.js:path and branch
+
 
 ##Launch
 ---------------------------------------
 
-node index
-```
+    node index
+
 
 ##Notice
 ---------------------------------------
 
-prot:1377
-```
+    prot:1377
+
 
 github : config webhook url
