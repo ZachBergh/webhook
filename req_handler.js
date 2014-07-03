@@ -28,6 +28,7 @@ handleFn.elkhorizon = function(data){
 	if(repo_name == "elkhorizon"){
 
 		console.log("INFO: Pull Branch '" + branch + "'");
+		console.log("INFO: Pull Path   '" + cfg.path + "'")
 		child_process.exec('cd ' + cfg.path + ' & git checkout ' + branch + ' & git pull', function(error, stdout, stderr){
 			console.log(stdout);
 		});
