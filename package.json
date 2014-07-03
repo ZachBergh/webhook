@@ -4,7 +4,8 @@
   "description": "by ZachBerg",
   "main": "index.js",
   "dependencies": {
-    "querystring": "~0.2.0"
+    "querystring": "~0.2.0",
+    "supervisor": "~0.6.0"
   },
   "devDependencies": {},
   "scripts": {
