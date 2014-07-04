@@ -1,0 +1,9 @@
+var config = {
+	"http_port" : 1377,
+	"elkhorizon" : {
+		"path" : "~/Document/git/webhook/",
+		"command" : ""
+	}
+}
+
+exports.config = config;
