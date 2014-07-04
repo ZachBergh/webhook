@@ -16,21 +16,19 @@ var _runCMDcb = function(error, stdout, stderr){
 	}
 };
 
-handleFn.elkhorizon = function(data){
+handleFn.handleHook = function(data){
 
 	if(typeof data != 'string') return 'false';
 	
 	var dataobj = JSON.parse(data);
 	var branch = dataobj.repository.master_branch;
 	var repo_name = dataobj.repository.name;
-
-	if(repo_name == "elkhorizon"){
+	
+	if(typeof cfg.rep_name != "undefined"){
 
 		console.log("INFO: Pull Branch '" + branch + "'");
-		console.log("INFO: Pull Path   '" + cfg.path + "'")
-		child_process.exec('cd ' + cfg.path + ' && git checkout ' + branch + ' && git pull', function(error, stdout, stderr){
-			console.log(stdout);
-		});
+		console.log("INFO: Pull Path   '" + cfg.rep_name.path + "'")
+		child_process.exec('cd ' + cfg.rep_name.path + ' && git checkout ' + branch + ' && git pull && ' + cfg.rep_name.command, _runCMDcb);
 	}
 	return false;
 }

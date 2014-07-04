@@ -3,6 +3,6 @@ var server = require('./server'),
 	reqHandler= require('./req_handler');
 
 var handle = {};
-handle['/elkhorizon'] = reqHandler.handleFn.elkhorizon;
+handle['/elkhorizon'] = reqHandler.handleFn.handleHook;
 
 server.launch(router.route, handle);
