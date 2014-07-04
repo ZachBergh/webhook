@@ -15,10 +15,11 @@ function launch(route, handle){
 	    });
 	    req.addListener('end', function() {
 	        
-			var content = route(handle, pname, postData);
+			route(handle, pname, postData);
 	    });
-
-		res.end();
+	    
+	    var content = route(handle, pname, postData);
+		res.end(content);
 	}
 
 	http.createServer(onRequest).listen(config.http_port);

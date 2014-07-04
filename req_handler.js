@@ -18,7 +18,7 @@ var _runCMDcb = function(error, stdout, stderr){
 
 handleFn.handleHook = function(data){
 
-	if(typeof data != 'string') return 'false';
+	if(typeof data != 'string' || data == "") return 'false';
 	
 	var dataobj = JSON.parse(data);
 	var branch = dataobj.repository.master_branch;
