@@ -24,11 +24,14 @@ handleFn.handleHook = function(data){
 	var branch = dataobj.repository.master_branch;
 	var repo_name = dataobj.repository.name;
 
-	if(typeof cfg.repo_name != "undefined"){
+	if(typeof cfg[repo_name] != "undefined"){
 
 		console.log("INFO: Pull Branch '" + branch + "'");
-		console.log("INFO: Pull Path   '" + cfg.repo_name.path + "'")
-		child_process.exec('cd ' + cfg.repo_name.path + ' && git checkout ' + branch + ' && git pull && ' + cfg.repo_name.command, _runCMDcb);
+		console.log("INFO: Pull Path   '" + cfg[repo_name]['path'] + "'")
+		child_process.exec('cd ' + cfg[repo_name]['path'] + ' && git checkout ' + branch + ' && git pull', _runCMDcb);
+		if(cfg[repo_name]['command'] != ""){
+			child_process.exec(cfg[repo_name]['command'], _runCMDcb);
+		}
 	}
 	return false;
 }
