@@ -23,12 +23,12 @@ handleFn.handleHook = function(data){
 	var dataobj = JSON.parse(data);
 	var branch = dataobj.repository.master_branch;
 	var repo_name = dataobj.repository.name;
-	
-	if(typeof cfg.rep_name != "undefined"){
+
+	if(typeof cfg.repo_name != "undefined"){
 
 		console.log("INFO: Pull Branch '" + branch + "'");
-		console.log("INFO: Pull Path   '" + cfg.rep_name.path + "'")
-		child_process.exec('cd ' + cfg.rep_name.path + ' && git checkout ' + branch + ' && git pull && ' + cfg.rep_name.command, _runCMDcb);
+		console.log("INFO: Pull Path   '" + cfg.repo_name.path + "'")
+		child_process.exec('cd ' + cfg.repo_name.path + ' && git checkout ' + branch + ' && git pull && ' + cfg.repo_name.command, _runCMDcb);
 	}
 	return false;
 }
